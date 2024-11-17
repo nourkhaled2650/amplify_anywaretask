@@ -3,8 +3,19 @@ import requireAuth from "../components/requireAuth";
 import Tips from "../components/Tips";
 import Announcements from "../components/Announcements";
 import Quizzes from "../components/Quizzes";
+import { client } from "../client";
+import { useEffect } from "react";
 
 const Dashboard = requireAuth(() => {
+  useEffect(() => {
+    console.log("loooooooooool");
+
+    (async () => {
+      const { data: newTodo } = await client.models.quiz.list();
+      console.log("loooooooooool", newTodo);
+    })();
+  }, []);
+
   return (
     <Grid sx={{ height: "" }} container spacing={{ xs: 1, md: 2 }}>
       <Grid size={{ xs: 12 }}>
