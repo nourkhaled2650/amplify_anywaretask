@@ -7,6 +7,11 @@ import router from "./route/index.tsx";
 import store from "./state/store.ts";
 import "./index.css";
 import "./utils/i18n.ts";
+import { Amplify } from "aws-amplify";
+import outputs from "../amplify_outputs.json";
+
+Amplify.configure(outputs);
+
 const theme = createTheme({
   palette: {
     primary: { main: "#013b45" },
