@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Typography } from "@mui/material";
 import { AllButton } from "./AllButton";
 import { useGetQuizzesQuery } from "../state/serverState/quizApi";
-import { QuizItem } from "./quizItem";
+import { QuizItem } from "./QuizItem";
 import { SecondaryFont } from "./SecondaryFont";
 
 const Quizzes = () => {
